@@ -158,6 +158,8 @@ function UpdateItem() {
 export default UpdateItem*/
 
 
+// correct code
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -333,3 +335,5 @@ function UpdateItem() {
 }
 
 export default UpdateItem;
+
+
