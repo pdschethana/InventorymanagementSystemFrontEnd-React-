@@ -22,6 +22,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home/Home.jsx';
 import AddItem from './component/AddItem/AddItem.jsx';
 import DisplayItem from "./component/DisplayItem/DisplayItem.jsx";
+import UpdateItem from './component/UpdateItem/UpdateItem.jsx';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/add" element={<AddItem />} />
       <Route path="/allitems" element={<DisplayItem/>} />
+      <Route path="/updateItem/:id" element={<UpdateItem/>} />
     </Routes>
   );
 }
