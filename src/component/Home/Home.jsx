@@ -29,6 +29,12 @@ function Home() {
       >
         Add Item
       </button>
+      <button 
+        onClick={() => navigate('/allitems')} 
+        style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer', marginTop: '20px' }}
+      >
+        Display Item
+      </button>
     </div>
   );
 }
