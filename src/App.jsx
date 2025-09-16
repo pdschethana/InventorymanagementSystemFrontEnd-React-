@@ -23,6 +23,7 @@ import Home from './component/Home/Home.jsx';
 import AddItem from './component/AddItem/AddItem.jsx';
 import DisplayItem from "./component/DisplayItem/DisplayItem.jsx";
 import UpdateItem from './component/UpdateItem/UpdateItem.jsx';
+import Register from './component/Register/Register.jsx';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Route path="/add" element={<AddItem />} />
       <Route path="/allitems" element={<DisplayItem/>} />
       <Route path="/updateItem/:id" element={<UpdateItem/>} />
+      <Route path="/register" element={<Register/>} />
     </Routes>
   );
 }
