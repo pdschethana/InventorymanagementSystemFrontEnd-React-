@@ -335,11 +335,22 @@ function DisplayItem() {
     // save the pdf
     doc.save("inventory_items.pdf");
   };
+  // serch function
+  const [searchQuery, setSearchQuery] = useState("");
+  const filteredData=inventory.filter((item)=>
+  item.itemId.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  item.itemName.toLowerCase().includes(searchQuery.toLowerCase()) );
 
   return (
     <div>
       <h1>Inventory Item</h1>
       <button onClick={() => generatePDF(inventory)}>Generate PDF</button>
+      <input
+      type="text"
+      placeholder="Search by Item ID or Name"
+      value={searchQuery}
+      onChange={(e)=>setSearchQuery(e.target.value)}></input>
+
       <table border="1" cellPadding="10" style={{ borderCollapse: "collapse" }}>
         <thead>
           <tr>
@@ -353,7 +364,7 @@ function DisplayItem() {
           </tr>
         </thead>
         <tbody>
-          {inventory.map((item, index) => (
+          {filteredData.map((item, index) => (
             <tr key={index}>
               <td>{item.itemId}</td>
               <td>
