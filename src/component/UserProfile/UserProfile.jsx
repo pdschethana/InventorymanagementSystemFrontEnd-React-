@@ -62,9 +62,13 @@ function UserProfile() {
         setIsLoading(false);
       });
   }, []);
+  const updateNavigate=(id)=>{
+    window.location.href=`/updateprofile/${id}`;
+  }
 
   if (isloading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
+
 
   return (
     <div>
@@ -75,6 +79,7 @@ function UserProfile() {
           <p><strong>Email:</strong> {user.email}</p>
           <p><strong>Full Name:</strong> {user.fullName}</p>
           <p><strong>Phone:</strong>{user.phone}</p>
+          <button onClick={()=>updateNavigate(user.id)}>Update</button>
         </div>
       ) : (
         <p>No user data found</p>

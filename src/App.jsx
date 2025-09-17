@@ -26,6 +26,7 @@ import UpdateItem from './component/UpdateItem/UpdateItem.jsx';
 import Register from './component/Register/Register.jsx';
 import Login from './component/Login/Login.jsx';
 import UserProfile from './component/UserProfile/UserProfile.jsx';
+import UpdateProfile from './component/UpdateProfile/UpdateProfile.jsx';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login/>} />
       <Route path='/userProfile' element={<UserProfile/>} />
+      <Route path='/updateprofile/:id' element={<UpdateProfile/>} />
     </Routes>
   );
 }
