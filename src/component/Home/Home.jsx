@@ -42,6 +42,13 @@ function Home() {
       >
         Register
       </button>
+
+      <button 
+        onClick={() => navigate('/login')} 
+        style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer', marginTop: '20px' }}
+      >
+        Login
+      </button>
     </div>
   );
 }

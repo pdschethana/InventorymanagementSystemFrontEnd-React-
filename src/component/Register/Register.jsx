@@ -82,7 +82,7 @@ function Register() {
     try {
       await axios.post("http://localhost:8080/user", user);
       alert("Registered Successfully");
-      navigate("/"); // go back to home (or another page)
+      window.location.href("/login");// go back to login
     } catch (error) {
       console.error("Error registering:", error);
       alert("Registration failed");

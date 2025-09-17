@@ -24,6 +24,7 @@ import AddItem from './component/AddItem/AddItem.jsx';
 import DisplayItem from "./component/DisplayItem/DisplayItem.jsx";
 import UpdateItem from './component/UpdateItem/UpdateItem.jsx';
 import Register from './component/Register/Register.jsx';
+import Login from './component/Login/Login.jsx';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/allitems" element={<DisplayItem/>} />
       <Route path="/updateItem/:id" element={<UpdateItem/>} />
       <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
     </Routes>
   );
 }
